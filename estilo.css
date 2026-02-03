@@ -1,0 +1,202 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* =========================
+   LAYOUT GENERAL (3 COLUMNAS)
+========================= */
+.layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =========================
+   COLUMNA 1: MENÚ
+========================= */
+.menu ul {
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+/* =========================
+   COLUMNA 2: CONTENIDO
+========================= */
+.contenido section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.contenido h2 {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   GALERÍA (GRID CONTROLADO)
+========================= */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 15px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   LUGARES DE INTERÉS
+========================= */
+.grid-lugares {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.lugar {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.lugar h3 {
+    margin-bottom: 10px;
+}
+
+.lugar img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   MAPA
+========================= */
+.mapa {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/* =========================
+   COLUMNA 3: NOTICIAS
+========================= */
+.noticias {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.noticia {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.noticia img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.noticia h4 {
+    margin-bottom: 8px;
+}
+
+.noticia p {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   ENLACE FLOTANTE
+========================= */
+.enlace-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: orange;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    z-index: 1000;
+}
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    .layout {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .noticias {
+        grid-column: span 2;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-lugares {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   MÓVIL
+========================= */
+@media (max-width: 767px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        order: 1;
+    }
+
+    .contenido {
+        order: 2;
+    }
+
+    .noticias {
+        order: 3;
+        grid-template-columns: 1fr;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+}
