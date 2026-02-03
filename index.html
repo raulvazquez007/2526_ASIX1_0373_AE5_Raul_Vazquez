@@ -36,6 +36,7 @@
         <!-- GALERÍA -->
         <section id="galeria">
             <h2>Galería</h2>
+             <!-- Galería de imágenes organizada con CSS Grid -->
             <div class="grid-galeria">
                 <img src="./Galeria/El_Pou_Clar.jpg" alt="">
                 <img src="./Galeria/Fallas.jpg" alt="">
@@ -47,9 +48,10 @@
         </section>
 
         <!-- LUGARES DE INTERÉS -->
+
         <section id="lugares">
     <h2>Lugares de interés</h2>
-
+<!-- Contenedor que agrupa los diferentes lugares turísticos -->
     <div class="grid-lugares">
 
         <article class="lugar">
@@ -96,12 +98,19 @@
 
 <!-- MAPA -->
         <section id="mapa">
-            <h2>Mapa de la ciudad</h2>
-            <img src="./Mapa/mapa_provincia_valencia.png" alt="Mapa de Valencia" class="mapa">
-        </section>
+    <h2>Mapa de la ciudad</h2>
 
+    <!-- Mapa de Google Maps incrustado -->
+    <iframe
+        src="https://www.google.com/maps?q=Valencia,España&z=12&output=embed"
+        class="mapa-google"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
 
 <!-- COLUMNA 3: NOTICIAS -->
+  <!-- Se usa <aside> porque es contenido complementario al principal -->
 <aside class="noticias">
 
     <article class="noticia">
@@ -145,3 +154,4 @@
         <a href="https://www.vozpopuli.com/espana/comunidad-valenciana/el-puerto-de-valencia-fija-2035-como-fecha-para-alcanzar-la-autosuficiencia-energetica.html" target="_blank">Leer más</a>
     </article>
 </aside>
+</html>

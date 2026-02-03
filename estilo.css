@@ -1,6 +1,4 @@
-/* =========================
-   RESET BÁSICO
-========================= */
+/* RESET BÁSICO*/
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +10,7 @@ body {
     line-height: 1.5;
 }
 
-/* =========================
-   LAYOUT GENERAL (3 COLUMNAS)
-========================= */
+/* LAYOUT GENERAL (3 COLUMNAS)*/
 .layout {
     display: grid;
     grid-template-columns: 220px 1fr 300px;
@@ -22,9 +18,7 @@ body {
     padding: 20px;
 }
 
-/* =========================
-   COLUMNA 1: MENÚ
-========================= */
+/* COLUMNA 1: MENÚ*/
 .menu ul {
     list-style: none;
 }
@@ -42,9 +36,7 @@ body {
     background-color: #ddd;
 }
 
-/* =========================
-   COLUMNA 2: CONTENIDO
-========================= */
+/*COLUMNA 2: CONTENIDO*/
 .contenido section {
     margin-bottom: 50px;
     padding-bottom: 30px;
@@ -55,9 +47,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* =========================
-   GALERÍA (GRID CONTROLADO)
-========================= */
+/* GALERÍA (GRID CONTROLADO)*/
 .grid-galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -72,9 +62,7 @@ body {
     display: block;
 }
 
-/* =========================
-   LUGARES DE INTERÉS
-========================= */
+/*LUGARES DE INTERÉS*/
 .grid-lugares {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -98,18 +86,15 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================
-   MAPA
-========================= */
-.mapa {
+/* MAPA*/
+.mapa-google {
     width: 100%;
-    height: auto;
+    height: 400px;
     border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-/* =========================
-   COLUMNA 3: NOTICIAS
-========================= */
+/* COLUMNA 3: NOTICIAS*/
 .noticias {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
@@ -137,9 +122,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* =========================
-   ENLACE FLOTANTE
-========================= */
+/* ENLACE FLOTANTE*/
 .enlace-flotante {
     position: fixed;
     top: 20px;
@@ -151,9 +134,7 @@ body {
     font-weight: bold;
     z-index: 1000;
 }
-/* =========================
-   TABLET
-========================= */
+/*TABLET*/
 @media (max-width: 1024px) and (min-width: 768px) {
 
     .layout {
@@ -172,11 +153,14 @@ body {
     .grid-lugares {
         grid-template-columns: 1fr;
     }
+    .mapa-google {
+        height: 320px;
+    }
 }
 
-/* =========================
-   MÓVIL
-========================= */
+
+/* MÓVIL*/
+
 @media (max-width: 767px) {
 
     .layout {
@@ -198,5 +182,8 @@ body {
 
     .grid-galeria {
         grid-template-columns: 1fr;
+    }
+    .mapa-google {
+        height: 260px;
     }
 }
